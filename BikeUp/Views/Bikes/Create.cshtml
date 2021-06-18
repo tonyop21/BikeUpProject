@@ -1,0 +1,42 @@
+﻿@model BikeUp.Models.Bike
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<div class="body-container">
+
+    <h4>Bike</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @*<div class="form-group">
+                        <label asp-for="Capacity" class="control-label"></label>
+                        <input asp-for="Capacity" class="form-control" />
+                        <span asp-validation-for="Capacity" class="text-danger"></span>
+                    </div>*@
+                <div class="form-group">
+                    <input type="radio" asp-for="Type" value="Electric" />Electric<br />
+                    <input type="radio" asp-for="Type" value="Gas" />Gas<br />
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <span id="validationMessage" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

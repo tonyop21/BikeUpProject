@@ -1,0 +1,328 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+/*a {
+  color: #0366d6;
+}*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-image: url("https://www.publicdomainpictures.net/pictures/170000/velka/vintage-bicycle-background-1461660162Hfk.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+img {
+    float: left;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-image-left {
+    background-image: url("https://www.publicdomainpictures.net/pictures/170000/velka/vintage-bicycle-background-1461660162Hfk.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*.background-image {
+    filter: opacity(0.5);
+}*/
+
+.blue-nav {
+    background-color: cornflowerblue;
+}
+
+.navbar {
+    /*background-image: url("https://www.freevector.com/uploads/vector/preview/28767/Japanese_Wave_Seamless_Pattern.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    background-color: cornflowerblue;
+}
+
+.nav-item {
+    border-radius: 10px;
+}
+
+.navbar-custom {
+    background-color: cornflowerblue;
+}
+
+.body-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+    opacity: 0.99;
+}
+
+.stick-out{
+
+}
+
+
+.stick-out:hover {
+    transition: transform .3s;
+    transform: scale(1.1);
+    
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: cornflowerblue;
+}
+
+.hvr-overline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+    .hvr-overline-from-center:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        top: 0;
+        background: #fff;
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .hvr-overline-from-center:hover:before, .hvr-overline-from-center:focus:before, .hvr-overline-from-center:active:before {
+        left: 0;
+        right: 0;
+    }
+
+.hvr-bounce-to-top {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+    .hvr-bounce-to-top:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(64, 95, 237, 0.5);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
+        color: white;
+    }
+
+        .hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+            transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        }
+
+
+.hvr-bounce-to-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+    .hvr-bounce-to-bottom:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(64, 95, 237, 0.5);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .hvr-bounce-to-bottom:hover, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
+        color: white;
+    }
+
+        .hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+            transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        }
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+    .hvr-underline-from-center:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: #fff;
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+        left: 0;
+        right: 0;
+    }
+
+h1 {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: cornflowerblue;
+    background-color: white;
+    font-family: 'Arial Rounded MT';
+    color: cornflowerblue;
+    /*-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;*/
+    border-radius: 10px;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Lucida Sans Unicode';
+    color: black;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: cornflowerblue;
+}
+
+.card {
+    opacity: 0.99;
+    border-radius: 10px;
+}
+
+table {
+    background-color: white;
+    border-radius: 10px
+}
+
+a {
+    color: cornflowerblue;
+    border-radius: 3px;
+}
+
+    a:hover {
+        color: lightcoral;
+    }
+
+

@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "BikeAlreadyRented";
+}
+
+<h4>@ViewBag.Exception.message</h4>
+
+<form asp-action="BackToRent">
+    <div input class="form-group">
+        <input style="text-align:center; padding-top: 10px" type="submit" value="Back" class="btn btn-primary" />
+        <span id="validationMessage" />
+    </div>
+</form>

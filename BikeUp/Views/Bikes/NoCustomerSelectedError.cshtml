@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "NoCustomerSelectedError";
+}
+
+<div class="body-container">
+    <h4>Please, select a valid customer...</h4>
+
+    <form asp-action="BackToRent">
+        <div input class="form-group">
+            <input style="text-align:center; padding-top: 10px" type="submit" value="Back" class="btn btn-primary" />
+            <span id="validationMessage" />
+        </div>
+    </form>
+</div>

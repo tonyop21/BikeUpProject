@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BikeUp.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Customer List</h1>
+
+<div class="body-container">
+    @using (Html.BeginForm())
+    {
+        <div class="d-flex justify-content-between">
+            <div>
+                @Html.TextBox("SearchString")
+                <a><input type="submit" value="Search" class="btn-outline-info" /></a>
+                <a><input type="submit" asp-action="RedirectToIndex" value="Reset" class="btn-outline-dark" /></a>
+            </div>
+            <div>
+                <p>
+                    <a asp-action="Create"> Create New </a>
+                </p>
+            </div>
+        </div>
+    }
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th>
+                    @Html.DisplayName("Rented Bike")
+                </th>
+                <th>
+                    @Html.DisplayName("Rented Date")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bike.BikeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bike.RentDate)
+                    </td>
+                    <td>
+                        @if (item.BikeId != null)
+                        {
+                            <a asp-action="ReturnBikeByCustomer" asp-route-id="@item.CustomerId" style="padding-left: 20px;"><input type="submit" value="Return Bike" class="btn btn-danger" /></a>
+                        }
+                        else
+                        {
+                            <a asp-action="RentBikeByCustomer" asp-route-id="@item.CustomerId" style="padding-left: 20px;"><input type="submit" value="Rent Bike" class="btn btn-primary" /></a>
+
+                        }
+                        <a asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.CustomerId">Details</a>
+                        @if (item.BikeId == null)
+                        {
+                            @Html.Raw("|") <a asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

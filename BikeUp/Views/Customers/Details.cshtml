@@ -1,0 +1,38 @@
+﻿@model BikeUp.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="body-container">
+    <div>
+        <h4>Customer # @Model.CustomerId</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.Label("Rented BikeID")
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Bike.BikeId)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.CustomerId">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>

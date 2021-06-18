@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "NoSelectedBikeIdError";
+}
+
+
+<div class="body-container">
+    <h4>Please, selected a valid bike ID...</h4>
+    <form asp-action="BackToReturn">
+        <div input class="form-group">
+            <input style="text-align:center; padding-top: 10px" type="submit" value="Back" class="btn btn-primary" />
+            <span id="validationMessage" />
+        </div>
+    </form>
+</div>
+

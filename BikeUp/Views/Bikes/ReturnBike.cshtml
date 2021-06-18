@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "ReturnBike";
+}
+
+<h1>Return Bike</h1>
+
+<div class="body-container">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Bikes" asp-action="ReturnBike" method="post">
+                <div class="form-group">
+                    <div class="form-group">
+                        @Html.DropDownList("BikeId", (IEnumerable<SelectListItem>)ViewData["Bikes"], "Select Bike ID")
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Return Bike" class="btn btn-primary" />
+                        <span id="validationMessage" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

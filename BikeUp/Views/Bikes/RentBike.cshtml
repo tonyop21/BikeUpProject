@@ -1,0 +1,32 @@
+﻿@model BikeUp.Models.Customer
+
+@{
+    ViewData["Title"] = "RentBike";
+}
+
+<h1>Rent A Bike</h1>
+
+<div class="body-container">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Bikes" asp-action="RentBike" method="post">
+                <div class="form-group">
+                    <div class="form-group">
+                        @Html.DropDownList("CustomerId", (IEnumerable<SelectListItem>)ViewData["Customers"], "Select Customer")
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="radio" value="Electric" name="Type" />Electric<br />
+                            <input type="radio" value="Gas" name="Type" />Gas<br />
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Rent Bike" class="btn btn-primary" />
+                        <span id="validationMessage" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

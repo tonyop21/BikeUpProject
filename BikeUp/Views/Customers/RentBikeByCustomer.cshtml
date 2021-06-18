@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "RentBikeByCustomer";
+}
+
+
+<div class="body-container">
+    <h1>Select your bike type</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Customers" asp-action="RentBikeByCustomer" method="post">
+                <div class="form-group">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="radio" value="Electric" name="Type" />Electric<br />
+                            <input type="radio" value="Gas" name="Type" />Gas<br />
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Rent Bike" class="btn btn-primary" />
+                        <span id="validationMessage" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
