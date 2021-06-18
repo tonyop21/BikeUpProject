@@ -111,33 +111,29 @@
         <div class="col-md-12" style="position: relative">
             <div style="position:relative; top: 30px; right: 20px">
                 <form asp-action="Index">
-                    <div class="" style="display: inline-block;">
-                        <select name="available">
-                            <option selected="selected" value="">Select availability</option>
-                            <option value="true">Available</option>
-                            <option value="false">Unavailable</option>
-                        </select>
-                        @*<input style="margin-left: 10px" type="radio" value="true" name="available" />  Available  <br />
-                            <input style="margin-left: 10px" type="radio" value="false" name="available" />  Unavailable  <br />*@
-
-                    </div>
-                    <div class="" style="display: inline-block;">
-                        <select name="type">
-                            <option selected="selected" value="">Select type</option>
-                            <option value="Electric">Electric</option>
-                            <option value="Gas">Gas</option>
-                        </select>
-                        @*<input style="margin-left: 10px" type="radio" value="Gas" name="type" />  Gas  <br />
-                            <input style="margin-left: 10px" type="radio" value="Electric" name="type" />  Electric  <br />*@
-                    </div>
-                    <br />
-                    <div class="" style="display: inline-block;">
-                        <input style="margin-bottom:20px; margin-left:20px" type="submit" value="Filter" class="btn btn-info" />
-                        <span id="validationMessage" />
-                    </div>
-                    <div class="" style="display: inline-block;">
-                        <input asp-action="RedirectToIndex" style="margin-bottom:20px; margin-left:20px" type="submit" value="Reset" class="btn btn-outline-dark" />
-                        <span id="validationMessage" />
+                    <div class="d-flex" style="align-items: flex-start">
+                        <div class="" style="display: inline-block;">
+                            <select name="available">
+                                <option selected="selected" value="">Select availability</option>
+                                <option value="true">Available</option>
+                                <option value="false">Unavailable</option>
+                            </select>
+                        </div>
+                        <div class="" style="display: inline-block; margin-left: 20px">
+                            <select name="type">
+                                <option selected="selected" value="">Select type</option>
+                                <option value="Electric">Electric</option>
+                                <option value="Gas">Gas</option>
+                            </select>
+                        </div>
+                        <div class="" style="display: inline-block; ">
+                            <input style=" margin-left:20px" type="submit" value="Filter" class="btn btn-info" />
+                            <span id="validationMessage" />
+                        </div>
+                        <div class="" style="display: inline-block; ">
+                            <input asp-action="RedirectToIndex" style="margin-bottom:20px; margin-left:20px" type="submit" value="Reset" class="btn btn-outline-dark" />
+                            <span id="validationMessage" />
+                        </div>
                     </div>
                 </form>
             </div>
