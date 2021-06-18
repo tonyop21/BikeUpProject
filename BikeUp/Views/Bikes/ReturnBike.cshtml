@@ -13,8 +13,12 @@
                     <div class="form-group">
                         @Html.DropDownList("BikeId", (IEnumerable<SelectListItem>)ViewData["Bikes"], "Select Bike ID")
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="display:inline-block">
                         <input type="submit" value="Return Bike" class="btn btn-primary" />
+                        <span id="validationMessage" />
+                    </div>
+                    <div class="form-group" style="display:inline-block">
+                        <input asp-action="DashBoard" type="submit" value="Back to DashBoard" class="btn btn-secondary" />
                         <span id="validationMessage" />
                     </div>
                 </div>

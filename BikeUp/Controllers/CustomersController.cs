@@ -28,7 +28,7 @@ namespace BikeUp.Controllers
             {
                 customers = customers.Where(c => c.Name.Contains(searchString));
             }
-            return View(await customers.ToListAsync());
+            return View(await customers.Include(c => c.Bike).ToListAsync());
         }
 
         public IActionResult RedirectToIndex()

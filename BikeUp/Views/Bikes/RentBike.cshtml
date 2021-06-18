@@ -21,8 +21,12 @@
                             <span class="text-danger"></span>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="display:inline-block">
                         <input type="submit" value="Rent Bike" class="btn btn-primary" />
+                        <span id="validationMessage" />
+                    </div>
+                    <div class="form-group" style="display:inline-block">
+                        <input asp-action="DashBoard"type="submit" value="Back to DashBoard" class="btn btn-secondary" />
                         <span id="validationMessage" />
                     </div>
                 </div>
