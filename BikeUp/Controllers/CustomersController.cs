@@ -112,7 +112,10 @@ namespace BikeUp.Controllers
             {
                 try
                 {
-                    _context.Update(customer);
+                    Customer customer1 = _context.SearchCustomerById(id);
+                    customer1.Name = customer.Name;
+                    customer1.Phone = customer.Phone;
+                    _context.Update(customer1);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
