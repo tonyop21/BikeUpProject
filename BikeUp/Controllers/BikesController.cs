@@ -134,7 +134,7 @@ namespace BikeUp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BikeId,RentDate,Capacity,Type,IsAvailable")] Bike bike)
+        public async Task<IActionResult> Edit(int id, [Bind("BikeId,RentDate,Capacity,Type,IsAvailable,TimesRented")] Bike bike)
         {
             if (id != bike.BikeId)
             {
@@ -145,6 +145,10 @@ namespace BikeUp.Controllers
             {
                 try
                 {
+                    bike = _context.SearchBikeById(id);
+                    bike.Capacity = Convert.ToDouble(Request.Form["capacity"]);
+                    
+                    
                     _context.Update(bike);
                     await _context.SaveChangesAsync();
                 }
